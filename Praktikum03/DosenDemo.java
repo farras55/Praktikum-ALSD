@@ -29,15 +29,11 @@ public class DosenDemo {
             arrayOfDosen[i] = new Dosen(kode, nama, jenisKelamin, usia);
         }
 
-        for (int i = 0; i < arrayOfDosen.length; i++) {
-            System.out.println("Data Dosen ke-" + (i + 1));
-            arrayOfDosen[i].tampilInformasi(i);
-        }
-
-
-        for (Dosen tampilDosen : arrayOfDosen) {
-            System.out.println(tampilDosen);
-        }
+        DataDosen demoDosen = new DataDosen();
+        demoDosen.dataSemuaDosen(arrayOfDosen);
+        demoDosen.jumlahDosenPerJenisKelamin(arrayOfDosen);
+        demoDosen.infoDosenPalingTua(arrayOfDosen);
+        demoDosen.infoDosenPalingMuda(arrayOfDosen);
 
         sc.close();
     }
