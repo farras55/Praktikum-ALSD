@@ -55,4 +55,61 @@ public class DataDosen12 {
             dataDosen[j + 1] = key;
         }
     }
+
+    void PencarianDataSequential12(String nama) {
+        boolean found = false;
+        int count = 0;
+        for (int i = 0; i < idx; i++) {
+            if (dataDosen[i].nama.equalsIgnoreCase(nama)) {
+                dataDosen[i].tampil();
+                found = true;
+                count++;
+            }
+        }
+        if (!found) {
+            System.out.println("Data tidak ditemukan!");
+        } else if (count > 1) {
+            System.out.println("Data dengan nama " + nama + " ditemukan lebih dari satu hasil.");  
+        }
+    }
+
+    void PencarianDataBinary12(int usia) {
+        int left = 0;
+        int right = idx - 1;
+        int mid;
+        boolean found = false;
+        int count = 0;
+        while (left <= right) {
+            mid = (left + right) / 2;
+            if (dataDosen[mid].usia == usia) {
+                dataDosen[mid].tampil();
+                found = true;
+                count++;
+
+                int tempLeft = mid - 1;
+                while (tempLeft >= 0 && dataDosen[tempLeft].usia == usia) {
+                    dataDosen[tempLeft].tampil();
+                    count++;
+                    tempLeft--;
+                }
+
+                int tempRight = mid + 1;
+                while (tempRight < idx && dataDosen[tempRight].usia == usia) {
+                    dataDosen[tempRight].tampil();
+                    count++;
+                    tempRight++;
+                }
+                break;
+            } else if (dataDosen[mid].usia < usia) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        if (!found) {
+            System.out.println("Data tidak ditemukan!");
+        } else if (count > 1) {
+            System.out.println("Data dengan usia " + usia + " ditemukan lebih dari satu hasil.");  
+        }
+    }
 }

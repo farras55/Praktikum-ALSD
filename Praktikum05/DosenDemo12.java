@@ -15,7 +15,9 @@ public class DosenDemo12 {
             System.out.println("3. Sorting ASC");
             System.out.println("4. Sorting DSC");
             System.out.println("5. Insertion Sort");
-            System.out.println("6. Keluar");
+            System.out.println("6. Pencarian Data Nama");
+            System.out.println("7. Pencarian Data Usia");
+            System.out.println("8. Keluar");
             System.out.print("Pilih: ");
             pilihan = input.nextInt();
             input.nextLine();
@@ -49,12 +51,22 @@ public class DosenDemo12 {
                     System.out.println("Data telah diurutkan menggunakan insertion sort.");
                     break;
                 case 6:
+                    System.out.print("Masukkan nama yang dicari: ");
+                    String cariNama = input.nextLine();
+                    data.PencarianDataSequential12(cariNama);
+                    break;
+                case 7:
+                    System.out.print("Masukkan usia yang dicari: ");
+                    int cariUsia = input.nextInt();
+                    data.PencarianDataBinary12(cariUsia);
+                    break;
+                case 8:
                     System.out.println("Keluar dari program.");
                     break;
                 default:
                     System.out.println("Pilihan tidak valid.");
             }
-        } while (pilihan != 6);
+        } while (pilihan != 8);
 
         input.close();
     }
