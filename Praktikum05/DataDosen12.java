@@ -85,14 +85,12 @@ public class DataDosen12 {
                 dataDosen[mid].tampil();
                 found = true;
                 count++;
-
                 int tempLeft = mid - 1;
                 while (tempLeft >= 0 && dataDosen[tempLeft].usia == usia) {
                     dataDosen[tempLeft].tampil();
                     count++;
                     tempLeft--;
                 }
-
                 int tempRight = mid + 1;
                 while (tempRight < idx && dataDosen[tempRight].usia == usia) {
                     dataDosen[tempRight].tampil();
