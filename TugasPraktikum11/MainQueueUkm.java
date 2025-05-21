@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MainQueueUkm {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        QueueLinkedList queue = new QueueLinkedList(); // contoh max 10
+        QueueLinkedList queue = new QueueLinkedList(10);
 
         int pilih;
         do {

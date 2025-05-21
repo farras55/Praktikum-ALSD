@@ -4,10 +4,10 @@ public class QueueLinkedList {
     Node front, rear;
     int size, max;
 
-    public QueueLinkedList() {
+    public QueueLinkedList(int max) {
         this.front = this.rear = null;
         this.size = 0;
-        this.max = size;
+        this.max = max;
     }
 
     public boolean isEmpty() {
