@@ -75,7 +75,7 @@ public class SingleLinkedList12 {
         for (int i = 0; i < index; i++) {
             tmp = tmp.next;
         }
-        tmp.data.tampilinformasi();   
+        tmp.data.tampilinformasi();
     }
     public int indexOf(String key) {
         Node12 tmp = head;
@@ -125,7 +125,7 @@ public class SingleLinkedList12 {
                     this.removeFirst();
                     break;
                 } else if (temp.data.nama.equalsIgnoreCase(key)) {
-                temp.next = temp.next;
+                temp.next = temp.next.next;
                     if (temp.next == null) {
                         tail = temp;
                     }
