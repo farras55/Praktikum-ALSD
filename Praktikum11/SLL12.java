@@ -31,19 +31,17 @@ public class SLL12 {
         sll.insertAt(2, mhsArr[1]);
         sll.print();
 
-        sll.remove("Faris");
+
+        System.out.println("Index ke-2");
+        sll.getData(2);
+        System.out.println("Data Mahasiswa Bimon berada pada index: " + sll.indexOf("Arya"));
+        System.out.println();
+
+        sll.removeFirst();
+        sll.removeLast();
         sll.print();
-
-        // System.out.println("Index ke-2");
-        // sll.getData(2);
-        // System.out.println("Data Mahasiswa Bimon berada pada index: " + sll.indexOf("Arya"));
-        // System.out.println();
-
-        // sll.removeFirst();
-        // sll.removeLast();
-        // sll.print();
-        // sll.removeAt(0);
-        // sll.print();
+        sll.removeAt(0);
+        sll.print();
 
         sc.close();
     }

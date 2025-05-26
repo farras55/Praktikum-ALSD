@@ -19,9 +19,13 @@ public class QueueLinkedList {
     }
 
     public void clear() {
-        front = rear = null;
-        size = 0;
-        System.out.println("Antrian dikosongkan.");
+        if (!isEmpty()) {
+            front = rear = null;
+            size = 0;
+            System.out.println("Antrian dikosongkan.");
+        } else {
+            System.out.println("Antrian masih kosong.");
+        }
     }
 
     public void enqueue(Mahasiswa mhs) {
