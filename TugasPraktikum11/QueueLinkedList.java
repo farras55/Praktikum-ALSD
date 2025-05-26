@@ -49,7 +49,7 @@ public class QueueLinkedList {
             System.out.println("Antrian kosong, tidak ada yang dipanggil.");
             return;
         }
-        System.out.print("Mahasiswa yang dipanggil: ");
+        System.out.println("Mahasiswa yang dipanggil: ");
         front.data.tampil();
         front = front.next;
         size--;
